@@ -1,0 +1,55 @@
+
+.account_type{
+    border: 1px solid black;
+    border-radius:10px;
+    padding: 10px;
+    width: 200px;
+    height: 250px;
+    text-align: justify;
+  }
+  
+  h1{
+      text-align: center;
+  }
+  
+  h2{
+      text-align:center;
+  }
+
+  .editbtn {
+ 
+    color: blue; /* Change the color to blue (or your preferred color) */
+    cursor: pointer; /* Change the cursor on hover */
+}
+.deletebtn {
+   
+    color: red; /* Change the color to blue (or your preferred color) */
+    cursor: pointer; /* Change the cursor on hover */
+}
+
+  
+  .logo{
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
+  }
+  
+  .personal_details{
+      
+      width: 50%;
+      border: 2px solid black;
+      border-radius:10px;
+      padding-left: 30px;
+      padding-top: 10px;
+      
+  }
+  
+  .details{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+  }
+
+  body{
+    background-image: url("../image/bookbackground.jpg");
+  }

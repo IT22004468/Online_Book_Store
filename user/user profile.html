@@ -1,0 +1,218 @@
+<?php 
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "user";
+
+//create connection
+$connection = new mysqli( $servername,$username,$password,$database);
+
+$firstname = ""; 
+$lastname = "";
+$gender = "";
+$mobilenumber = "";
+$emailaddress = "";
+$address = "";
+$date = "";
+$passwords = "";
+
+$errorMessage = "";
+$successMessage = "";
+
+//GET method
+if ($_SERVER['REQUEST_METHOD'] == 'GET') 
+{
+
+    $emailaddress = $_GET["emailaddress"];
+    $password = $_GET["password"];
+
+    //read the row of the selected user from database
+    $sql = "SELECT * FROM registration WHERE emailaddress=$emailaddress AND passwords=$passwords";
+    $result = $connection->query($sql);
+    $row = $result->fetch_assoc();
+
+    $firstname = $row["firstname"];
+    $lastname = $row["lastname"];
+    $gender = $row["gender"];
+    $mobilenumber = $row["mobilenumber"];
+    $emailaddress = $row["emailaddress"];
+    $address = $row["address"];
+    $date = $row["date"];
+    $passwords = $row["passwords"];
+
+}
+else{
+    //POST method
+
+    $firstname = $_POST["firstname"];
+    $lastname = $_POST["lastname"];
+    $gender = $_POST["gender"];
+    $mobilenumber = $_POST["mobilenumber"];
+    $emailaddress = $_POST["emailaddress"];
+    $address = $_POST["address"];
+    $date = $_POST["date"];
+    $passwords = $_POST["passwords"];
+
+
+    do {
+        $sql = "UPDATE registration"
+               ."SET firstname = '$firstname', lastname = '$lastname', gender = '$gender', 
+               mobilenumber = '$mobilenumber', emailaddress = '$emailaddress', 
+               address = '$address', date = '$date', passwords = '$passwords' " 
+               . "mobilenumber = $mobilenumber";
+
+        $result = $connection->query($sql);
+        
+        if (!$result) {
+            $errorMessage = "invalid query: " . $connection->error;
+            break;
+        }
+
+        $successMessage = "Client updated correctli";
+
+    } while (true);
+
+}
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Book Shop</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="style/userprofile.css">
+</head>
+<body>
+
+    <header class="header">
+
+        <div class="header-1">
+
+            <a href="" class="logo"> AnyBook  </a>
+
+            <form action="" class="search-form">
+                <input type="search" name="" placeholder="search here..." id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+
+            <div class="icons">
+                <div  id="search-btn" class="fas fa-search"></div>
+               
+            </div>
+            <button  class="login-btn">sing in</div>
+
+        </div>
+
+        <div class="header-2">
+
+            <div class="navbar">
+                <a href="#">Home</a>
+                <a href="">contact us </a>
+                <a href="">rrivals</a>
+                <a href="">reviews</a>
+                <a href="">blogs</a>
+            </div>
+
+        </div>
+
+    </header>
+    
+<br><h1>My Account</h1><br>
+<!-- add a logo (b) -->
+<img src = "image/user.jpg" width="200" height="200" class="logo"><br><br>
+<div class = "details">
+    <div class = "account_type" >
+        <!--add a header-->
+        <h2>Orders</h2><br>
+        
+        </div>
+        
+        <!--personal details-->
+        <div class = "personal_details">
+        <h2>Personal Details</h2><br>
+
+        <label for = "firstname">First Name</label><br>
+	 <input class = "inputfield" type="text" placeholder="First Name" name="firstname" value="" required><br><br>
+	 
+	 <label for = "lastname">Last Name</label><br>
+	 <input class = "inputfield" type="text" placeholder="Last Name" name="lastname" value="" required><br><br>
+	 
+	 <label>Gender</label>
+	 <input type="radio" id="male" name="gender" value="" required>
+	 <label for="male">Male</label>
+	 
+	
+	 <input type="radio" id="female" name="gender" value="" required>
+	 <label for="female">female</label> <br><br>
+	 
+	 <label for = "mobilenumber">Mobile Number</label><br>
+	 <input class = "inputfield" type="text"  title="Please Enter Valid Mobile Number" placeholder="Mobile Number" name="mobilenumber" value="" required><br><br>
+	 
+	 <label for = "emailaddress">E-mail Address</label><br>
+	 <input class = "inputfield" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Please Enter Valid E-mail Address" placeholder="E-mail Address" name="emailaddress" value="" required><br><br>
+	 
+     <p><label for="address">Address</label></p>
+	 <textarea id="address" name="address" rows="4" cols="25" value="" required></textarea><br><br>
+    
+	 <label for="dob">Enter Your DOB</label><br>
+	 <input type="date" name="date" value="" required><br>
+	 
+     <button type = "submit" class="editbtn" >Edit</button>
+     <button type = "submit" class="updatebtn" >update</button>
+        
+        </div>
+</div>
+<!---footer start-->
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>our locations</h3>
+            <a href=""><i class="fas fa-map-marker-alt"></i>colombo,srilanka</a>
+            <a href=""><i class="fas fa-map-marker-alt"></i>galle,srilanka</a>
+            <a href=""><i class="fas fa-map-marker-alt"></i>mathara,srilanka</a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href=""><i class="fas fa-arrow-right"></i>home</a>
+            <a href=""><i class="fas fa-arrow-right"></i>freatured</a>
+            <a href=""><i class="fas fa-arrow-right"></i>arrivals</a>
+            <a href=""><i class="fas fa-arrow-right"></i>blogs</a>
+          
+        </div>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href=""><i class="fas fa-arrow-right"></i>account info</a>
+            <a href=""><i class="fas fa-arrow-right"></i>ordered items</a>
+            <a href=""><i class="fas fa-arrow-right"></i>privacy policy</a>
+            <a href=""><i class="fas fa-arrow-right"></i>payment method</a>
+            <a href=""><i class="fas fa-arrow-right"></i>our services</a>
+        </div>
+
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href=""><i class="fas fa-phone"></i>041000000</a>
+            <a href=""><i class="fas fa-phone"></i>071220000</a>
+            <a href=""><i class="fas fa-envelope"></i>kashum@gmail.com</a>
+           
+        </div>
+    </div>
+
+    <div class="share">
+        <a href=""><i class="fas fa-facebook"></i></a>
+        <a href=""><i class="fas fa-twitter"></i></a>
+        <a href=""><i class="fas fa-instagram"></i></a>
+        <a href=""><i class="fas fa-linkedin"></i></a>
+        <a href=""><i class="fas fa-square-pinterest"></i></a>
+    </div>
+
+    <div class="credit">create bTY <span></span> | all rights reserved</div>
+
+</section>
+</body>

@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Book Shop</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="reg/registration.css">
+</head>
+<body>
+	
+<div class = "registration_form">
+
+	<div class="r_form"><h1>Registration Form</h1></div><br><br>
+	 
+	 <form  action = "register.php" method="post">
+	 
+	 <label for = "firstname">First Name</label><br>
+	 <input class = "inputfield" type="text" placeholder="First Name" name="firstname" required><br><br>
+	 
+	 <label for = "lastname">Last Name</label><br>
+	 <input class = "inputfield" type="text" placeholder="Last Name" name="lastname"  required><br><br>
+	 
+	 <label for = "mobilenumber">Mobile Number</label><br>
+	 <input class = "inputfield" type="text"  title="Please Enter Valid Mobile Number" placeholder="Mobile Number" name="mobilenumber"  required><br><br>
+	 
+	 <label for = "emailaddress">E-mail Address</label><br>
+	 <input class = "inputfield" type="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Please Enter Valid E-mail Address" placeholder="E-mail Address" name="emailaddress"  required><br><br>
+	 
+     <p><label for="address">Address</label></p><br>
+	 <textarea id="address" name="address" rows="6" cols="50"  required></textarea><br><br>
+    
+	 <label for="dob">Enter Your DOB</label><br>
+	 <input type="date" name="date"  required><br><br>
+	 
+	 <label for="pwd">Password</label><br>
+	 <input class = "inputfield" type="password" id="pwd"  title="Must contain at least one number and one uppercase" placeholder="Password" name="passwords"  required><br><br>
+	 
+	 <label for="rpwd">Re Enter Password</label><br>
+	 <input class = "inputfield" type="password" id="rpwd" placeholder="Password" name="passwords"  required><br><br>
+	 
+	 <input type="checkbox" id="checb" onclick="enableButton()" value="checkbox">
+	 <label for="checb">Accept Privacy Policy & Terms</label><br><br>
+	 
+	 <input type = "submit"  class="submitbtn">
+	 
+	 </form>
+    </div>
+
+
+</body>
+</html>

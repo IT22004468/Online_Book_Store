@@ -1,0 +1,51 @@
+input[type=text]{
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 20px;
+    
+}
+
+form.f1{
+	background-image: url("../pics/bk.jpg");
+	padding:11px;
+	margin:50px 250px;
+	width:900px;
+    box-align: center;
+}
+
+
+h1.one{
+    text-align: center;
+    font-size: 50px;
+    color: aqua;
+}
+
+label{
+    font-size: 20px;
+    color: rgb(207, 236, 249);
+    
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #d6925b;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #7d6324;
+  }
+
+  p{
+    font-size: 15px;
+    font-family: 'Times New Roman';
+    font-weight: 1000;
+    color: red;
+}

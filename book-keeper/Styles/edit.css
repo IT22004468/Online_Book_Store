@@ -1,0 +1,43 @@
+input[type=text], select{
+    width: 100%;
+    padding:12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 10px soild #e63838;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+.f2{
+   
+    margin: 60px 200px;
+    font-size:medium;
+    border-radius: 5px;
+    background-color: #dfd7d7;
+    padding: 50px;
+    width:900px;
+}
+
+
+input[type=submit], select{
+    width: 250px;
+    background-color: #e63838;
+    color: azure;
+    padding: 14px 20px;
+    border-radius: 4px;
+    margin-left:50px ;
+
+}
+
+.close{
+width: 250px;
+background-color: #386ce6;
+color: azure;
+padding: 14px 20px;
+border-radius: 4px;
+margin-left: 200px;
+/* margin: 10px 550px; */
+
+}

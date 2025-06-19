@@ -1,0 +1,84 @@
+h1
+{
+	font-size:40px;
+    color:rgb(2, 0, 139)
+}
+h2
+{
+    font-size:30px;
+	color:brown
+}
+h3
+{
+    font-size:18px;
+}
+.butt
+{
+
+    background-color: #23c40e;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.butt:hover
+{
+    background-color: #08f828;
+    color: white;
+}
+.butt1
+{
+    background-color: #d81b2b;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.butt1:hover
+{
+    background-color: #be0404;
+    color: white;
+}
+.button
+{
+    background-color: #1bd8af;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button:hover
+{
+    background-color: #04b2be;
+    color: white;
+}
+.box
+{
+    
+		background-color: rgb(240, 250, 255);
+		width: 1000px;
+		max-width: 200%;
+		height: auto;
+		margin: 30px auto;
+		padding: 40px;
+		border: 1px solid #ccc
+}
+.box .dis
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 18px;
+}

@@ -1,0 +1,49 @@
+h1
+{
+	font-size:40px;
+}
+h2
+ {
+	font-size: 16px;
+	font-weight: 300;
+ }
+h3{
+	font-size:30px;
+}
+h4
+ {
+    font-size: 20px;
+ }
+.line1{
+	border-top:2px solid black;	
+}
+form{
+	background-color: rgb(174, 255, 255);
+	width:300px;
+	padding:5px 0;
+	font-size: 16px;
+	margin:auto;
+	border: none;
+	border-bottom: 2px solid #333;
+	outline: none;
+	resize: none;
+	}
+	 .contact
+	 {
+		background-image: url("../image/contact.jpg");
+		width: 1000px;
+		max-width: 200%;
+		height: auto;
+		margin: 30px auto;
+		padding: 40px;
+		border: 1px solid #ccc;
+	}
+	
+	 .contact .cont
+	 {
+		display: flex;
+		justify-content: space-between;
+        margin-bottom: 5px;
+	 }
+	 
+	

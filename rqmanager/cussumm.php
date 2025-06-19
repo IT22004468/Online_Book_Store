@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>custermer deatils</title>
+        <link rel="stylesheet" href="css/cus.css">
+    </head>
+    <body>
+        <?php
+        $Servername="localhost";
+        $User="root";
+        $pw="";
+        $sbase="savidya";
+
+        $conn=new mysqli($Servername,$User,$pw,$sbase);
+
+        if($conn->connect_error)
+        {
+            die("Connection failed :". $conn->connect_error);
+        }
+
+        echo"Connection Successfully";
+
+
+        ?>
+
+
+        <h1>Custermer Deatils</h1> 
+
+        <div class="box">
+
+        <h2>Summary</h2>
+
+        <div class="dis">
+            <div>Custermer Id:10201</div>
+            <div>Name:Bumal Sathsara</div>
+        </div>
+<hr>
+
+<h3>Book id:<br>
+    Date & Time:<br>
+    Book quntity:<br>
+    Phone Number:<br>
+    Custermer Name:<br>
+    Total amount:<br>
+</h3>
+
+<button type="button"class="butt"><a href="check.html">Approval</a></button>
+<button type="button"class="butt1"><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#sent?compose=new">Send Email</a></button>
+
+</div>
+
+</body>
+</html>
+    

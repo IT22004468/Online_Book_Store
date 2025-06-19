@@ -1,0 +1,30 @@
+body{
+	background-image:url("../image/finan.jpg");
+}
+.butt {
+  background-color:  #008CBA;
+  border: none;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 40px 100px;
+  cursor: pointer;
+}
+.butt
+{
+  background-color: rgb(222, 241, 109); 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+.butt:hover {background-color: #caec05}
+
+.butt:active
+{
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
